@@ -1,5 +1,5 @@
 % Load audio file using audioread (works for .wav and .mp3 files)
-file = 'C:/Users/ez/0/just-relax-11157.wav'; % Replace with your file path
+file = 'C:/Users/ez/0/just-relax-11157.mp3'; % Replace with your file path
 [data, fs] = audioread(file); % 'data' is the audio signal, 'fs' is the sampling rate
 
 % If the audio has two channels (stereo), convert it to mono
