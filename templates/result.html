@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Emotion Prediction</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .card h2 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ffc107;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .card p {
+            font-size: 1.3em;
+        }
+
+        .btn {
+            background-color: #6C63FF;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #5348c7;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #ffe;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Emotion Prediction Result</h1>
+    <div class="card">
+        <p>The predicted emotion for the song is:</p>
+        <h2><strong>{{ emotion }}</strong></h2>
+        <a href="{{ url_for('upload_form') }}" class="btn">Upload Another Song</a>
+    </div>
+
+    <div class="message">
+        {% if message %}
+        <p>{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>
