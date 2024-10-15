@@ -10,7 +10,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Folder to save uploaded files
-UPLOAD_FOLDER = 'C:/Users/ez/0/music_uploaded'
+UPLOAD_FOLDER = 'music_uploaded'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Ensure upload folder exists
@@ -18,15 +18,15 @@ if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
 # Load your model and scaler
-modelApp = load_model('C:/Users/ez/0/music_emotion_model.h5')
-scalerApp = joblib.load('C:/Users/ez/0/scaler.joblib')
+modelApp = load_model('music_emotion_model.h5')
+scalerApp = joblib.load('scaler.joblib')
 
 # Load the LabelEncoder to convert predicted class back to original label
-LabelEncoder = joblib.load('C:/Users/ez/0/LabelEncoder.joblib')
+LabelEncoder = joblib.load('LabelEncoder.joblib')
 
 # Start MATLAB engine
 eng = matlab.engine.start_matlab()
-eng.addpath(r'C:/Users/ez/0/matlab')  # Add MATLAB script path
+eng.addpath(r'matlab')  # Add MATLAB script path
 
 @app.route('/')
 def upload_form():
@@ -50,8 +50,7 @@ def upload_music():
 
         try:
             # Define the output CSV path for MATLAB to save extracted features
-            output_csv = 'C:/Users/ez/0/matlab/extracted_features.csv'  # Specify the CSV file, not just the directory
-
+            output_csv = 'matlab/extracted_features.csv'  # Specify the CSV file, not just the directory
 
             # Run MATLAB script for feature extraction, passing uploaded file path and output CSV path to MATLAB
             eng.extract_features(str(filepath), str(output_csv), nargout=0)  # Ensure paths are passed as strings
@@ -78,7 +77,8 @@ def upload_music():
             predicted_class = np.argmax(prediction, axis=1)
             emotion_class = LabelEncoder.inverse_transform(predicted_class)
 
-            return f'The predicted emotion for the song is: {emotion_class[0]}'
+            # Render result.html with the emotion prediction
+            return render_template('result.html', emotion=emotion_class[0])
 
         except Exception as e:
             return f"An error occurred: {str(e)}"
