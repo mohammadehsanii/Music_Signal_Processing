@@ -1,6 +1,3 @@
-# **Music Emotion Analysis**
-
-
 # 🎵 Music Emotion Analysis 🎧  
 *Unlocking the emotional soul of sound using AI & Signal Processing*
 
