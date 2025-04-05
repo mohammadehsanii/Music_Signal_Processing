@@ -1,4 +1,4 @@
-# 🎧 Music Emotion Detection System  
+# 🎧 Music Emotion Detection
 *“Where AI meets art to understand what music feels like.”*
 
 ---
