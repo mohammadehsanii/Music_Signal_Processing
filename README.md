@@ -1,12 +1,5 @@
 # **Music Emotion Analysis**
 
----
-
-Awesome! Based on your project details and the existing content in `README.md`, I’ve crafted an **attractive, professional, and well-structured README** that will stand out on GitHub and clearly convey the depth and impact of your work.
-
-You can copy and paste the following to replace your existing README or merge as needed:
-
----
 
 # 🎵 Music Emotion Analysis 🎧  
 *Unlocking the emotional soul of sound using AI & Signal Processing*
@@ -151,13 +144,3 @@ This project is a solid blueprint for music-based emotion classification using h
 
 ---
 
-### 🧠 Built With
-- Python, TensorFlow/Keras
-- MATLAB & MIRtoolbox
-- Flask
-- Jupyter Notebooks
-- 💙 Music & AI ❤️
-
----
-
-Let me know if you’d like a **markdown file**, **badge setup**, or a **GitHub banner** to go with this!
