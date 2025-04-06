@@ -1,4 +1,4 @@
-# 🎧 **Music Emotion Detection System: Full Technical Report**  
+# 🎧 **Music Emotion Detection**  
 *Unveiling the emotional spectrum of music using Deep Learning and Audio Signal Processing*
 
 ---
