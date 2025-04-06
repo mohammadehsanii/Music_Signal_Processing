@@ -178,7 +178,7 @@ Displays the predicted emotion in a stylized "card" with options to upload anoth
 
 ### 📈 Accuracy:
 
-> Achieved **~89–92%** accuracy on test split with minimal overfitting.
+> Achieved **~89–92%** accuracy on test set.
 
 ### 📉 Confusion Matrix:
 
