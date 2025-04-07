@@ -189,6 +189,8 @@ Displays the predicted emotion in a stylized "card" with options to upload anoth
 - High precision for dominant classes (e.g., Joy, Calm)
 - Minor confusion between similar emotions (e.g., Sad vs. Relaxed)
 
+![Image](https://github.com/user-attachments/assets/09b5cfde-5e36-44c9-bf0d-8c69ded41bdf)
+
 ### 📌 Strengths of Model:
 
 - Regularized NN avoids overfitting
