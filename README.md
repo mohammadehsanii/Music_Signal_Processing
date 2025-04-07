@@ -179,6 +179,9 @@ Displays the predicted emotion in a stylized "card" with options to upload anoth
 ### 📈 Accuracy:
 
 > Achieved **~89–92%** accuracy on test set.
+
+
+
 ![Image](https://github.com/user-attachments/assets/35438de6-a21b-4781-ba79-a8fb33edcd10)
 
 ### 📉 Confusion Matrix:
