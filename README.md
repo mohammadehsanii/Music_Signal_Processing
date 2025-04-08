@@ -2,6 +2,7 @@
 *Unveiling the emotional spectrum of music using Deep Learning and Audio Signal Processing*
 
 <sub> _To view the plots and charts, please visit my [Kaggle Notebook](https://www.kaggle.com/code/mohammadehsani/music-emotion-detection)._ </sub>
+
 ---
 
 ## 🧠 **1. Introduction**
